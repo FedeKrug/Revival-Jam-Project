@@ -20,7 +20,6 @@ public class EnemyBulletGen : MonoBehaviour
 
     IEnumerator ConstantShooting()
 	{
-
         Instantiate(bullets, transform.position, transform.rotation);
         yield return new WaitForSeconds(cooldown);
         StartCoroutine(ConstantShooting());

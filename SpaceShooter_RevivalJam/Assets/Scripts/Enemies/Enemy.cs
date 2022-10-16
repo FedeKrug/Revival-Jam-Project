@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] List<GameObject> bulletGenerators;
+    //[SerializeField] List<GameObject> bulletGenerators;
 
     Rigidbody2D rb2d;
     Animator anim;
