@@ -1832,6 +1832,7 @@ GameObject:
   - component: {fileID: 682088845}
   - component: {fileID: 682088844}
   - component: {fileID: 682088847}
+  - component: {fileID: 682088848}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1851,7 +1852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26fc3a2b1a9ab546ae5b38c3c9fd289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minSpeed: 10
   speed: 10
+  maxSpeed: 20
   horizontalAxis: Horizontal
 --- !u!212 &682088845
 SpriteRenderer:
@@ -1940,6 +1943,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 6
+--- !u!61 &682088848
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682088843}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1266667, y: 0.7733333}
+    newSize: {x: 1.1266667, y: 0.7733333}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5281577, y: 0.36252242}
+  m_EdgeRadius: 0
 --- !u!1 &882725829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,6 +2375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletToShoot: {fileID: 6238983919197545792, guid: f863fcdaa402d464aab732abca50403d, type: 3}
+  cooldown: 1.5
+  timeRemaining: 2
 --- !u!1 &1028403161
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float speed;
+    [SerializeField] float minSpeed, speed, maxSpeed;
     [SerializeField] string horizontalAxis;
     Vector2 moveInput;
 
@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        speed = minSpeed;
     }
 
     // Update is called once per frame
@@ -21,7 +22,14 @@ public class Player : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw(horizontalAxis);
         moveInput = new Vector2(moveX,0).normalized;
-
+        if (Input.GetKey(KeyCode.LeftShift))
+		{
+            speed = maxSpeed;
+		}
+        else
+		{
+            speed = minSpeed;
+		}
     }
 	
 	private void FixedUpdate()
