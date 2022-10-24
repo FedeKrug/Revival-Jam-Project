@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shleter
+  - Limit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Limit
   - Water
   - UI
   - Bullet
