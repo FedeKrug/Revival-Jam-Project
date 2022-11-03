@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8098714477100998192}
   - component: {fileID: 1371380428341030868}
-  - component: {fileID: 7447184570024057725}
   - component: {fileID: 7460700492036736034}
+  - component: {fileID: 1547854663}
   m_Layer: 7
   m_Name: Alien SpaceShip Green
   m_TagString: Untagged
@@ -85,20 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7447184570024057725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845558048598420164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06d3cfd730fd15f4590f58656ef35264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  bulletGenerators: []
 --- !u!61 &7460700492036736034
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -109,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -125,6 +111,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5203306, y: 0.3433024}
   m_EdgeRadius: 0
+--- !u!114 &1547854663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845558048598420164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e70426edc1a3f64fbdb95981b04defb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSprites: []
+  animationTime: 1
+  minSpeed: -1
+  speed: 1
+  maxSpeed: 1
+  onLimit: 0
 --- !u!1 &7220666956089514760
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +153,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7220666956089514760}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7, y: -0.075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -169,4 +173,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2.5
-  bullets: {fileID: 6238983919197545792, guid: f863fcdaa402d464aab732abca50403d, type: 3}
+  bullets: {fileID: 720020331815181868, guid: f408e2b622c93804697a81f1b9989247, type: 3}

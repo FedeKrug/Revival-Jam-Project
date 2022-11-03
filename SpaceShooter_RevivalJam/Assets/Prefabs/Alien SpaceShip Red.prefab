@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7397783912964404527}
   - component: {fileID: 4376480664041055189}
-  - component: {fileID: 7180684891037904816}
   - component: {fileID: 4679256127858848129}
+  - component: {fileID: 2108791145}
   m_Layer: 7
   m_Name: Alien SpaceShip Red
   m_TagString: Untagged
@@ -85,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7180684891037904816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2756608609197547332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06d3cfd730fd15f4590f58656ef35264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
 --- !u!61 &4679256127858848129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -108,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -124,6 +111,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5203306, y: 0.3433024}
   m_EdgeRadius: 0
+--- !u!114 &2108791145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756608609197547332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e70426edc1a3f64fbdb95981b04defb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSprites: []
+  animationTime: 1
+  minSpeed: -1
+  speed: 1
+  maxSpeed: 1
+  onLimit: 0
 --- !u!1 &4599463324004886681
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,8 +153,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4599463324004886681}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.7, y: -0.075, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.493, y: -0.272, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7397783912964404527}
